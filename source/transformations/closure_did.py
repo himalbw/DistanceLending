@@ -1,11 +1,9 @@
 import pandas as pd
 from pathlib import Path
 import statsmodels.api as sm
-from clean_closure_data import load_data, add_prev_next_windows
 from linearmodels.iv import AbsorbingLS
 import numpy as np
 import datetime
-
 
 INDIR_SBA = Path("source/transformations/data")
 OUTDIR_RESULTS = Path("output/transformations/did_results")
@@ -195,6 +193,10 @@ def did_county_year(df, input_var, outcome_var):
 
     return res, row
 
+def load_sba_panels():
+    sba_bcy = pd.read_csv(INDIR_SBA / "sba_bcy.csv")
+    sba_cy = pd.read_csv(INDIR_SBA / "sba_cy.csv")
+    return sba_bcy, sba_cy
 
 def run_bcy_dids(sba_bcy):
     """
@@ -254,8 +256,8 @@ def run_cy_dids(sba_cy):
         "default_rate",
         "pif_rate",
         "n_loans",
+        "loan_growth"
     ]
-
     treatments = [
         "any_closure",
         "any_exog_closure",
@@ -286,10 +288,10 @@ def run_cy_dids(sba_cy):
         print("\nNo county–year DIDs were run (no matching _next5/_prev5 pairs).")
 
 def main():
-    sba_bcy, sba_cy, sod_bcy, sod_cy = load_data()
+    sba_bcy, sba_cy = load_sba_panels()
+    open(LOG_PATH, "w").close()
     run_bcy_dids(sba_bcy)
     run_cy_dids(sba_cy)
-
 
 if __name__ == "__main__":
     open(LOG_PATH, "w").close()
