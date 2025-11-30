@@ -13,6 +13,9 @@ def main() -> None:
     stats_bcy_cl, stats_cy_cl = get_closure_comparison_stats(sba_bcy, sba_cy)
     stats_bcy_ex, stats_cy_ex = get_exog_closure_comparison_stats(sba_bcy, sba_cy)
     stats_bcy_tex, stats_cy_tex = get_true_exog_closure_comparison_stats(sba_bcy, sba_cy)
+    sba_bcy.to_csv(INDIR_SBA / "sba_bcy.csv", index=False)
+    sba_cy.to_csv(INDIR_SBA / "sba_cy.csv", index=False)
+    print("Saved Revised SBA and SOD panels to source/transformations/data")
     pretty_bcy, pretty_cy = make_pretty_summary_tables(
         stats_bcy, stats_cy,
         stats_bcy_cl, stats_cy_cl,

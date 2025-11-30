@@ -234,17 +234,14 @@ main_cy <- function() {
   if ("borrower_county" %in% names(dt) && !"county" %in% names(dt)) {
     data.table::setnames(dt, "borrower_county", "county")
   }
-  
-  # Unit = county (no bank dimension here)
   dt[, unit_id := county]
-  
-  window_pre  <- 10
+  window_pre  <- 5
   window_post <- 10
-  
   treatments <- c("any_closure", "any_exog_closure", "any_true_exog")
-  # use whatever outcomes actually exist in sba_cy
-  outcomes   <- c("dist_median_next5",
-                  "dist_mean_next5",
+  outcomes   <- c("dist_median",
+                  "dist_mean",
+                  "dist_median_next5",
+                  "n_branches_next5"
                   "default_rate_next5",
                   "loan_growth_next5")
   
@@ -283,12 +280,7 @@ main_cy <- function() {
       }
       
       message("  Running ES (county-year) for outcome: ", y)
-      
-      est <- run_stacked_es_cy(
-        stacked_dt = stacked_dt,
-        outcome    = y,
-        treatment  = tr
-      )
+      est <- run_stacked_es_cy(stacked_dt = stacked_dt, outcome = y, treatment  = tr)
       
       # Save plot
       plot_title <- paste0("Stacked ES (CY): ", y, " (", tr, ")")
