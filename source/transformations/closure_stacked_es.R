@@ -235,15 +235,15 @@ main_cy <- function() {
     data.table::setnames(dt, "borrower_county", "county")
   }
   dt[, unit_id := county]
-  window_pre  <- 5
+  window_pre  <- 10
   window_post <- 10
   treatments <- c("any_closure", "any_exog_closure", "any_true_exog")
   outcomes   <- c("dist_median",
                   "dist_mean",
                   "dist_median_next5",
-                  "n_branches_next5"
+                  "n_branches_next5",
                   "default_rate_next5",
-                  "loan_growth_next5")
+                  "loan_growth_next5", "total_loan_growth")
   
   for (tr in treatments) {
     if (!tr %in% names(dt)) {
