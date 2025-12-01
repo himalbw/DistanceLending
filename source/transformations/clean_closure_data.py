@@ -108,13 +108,12 @@ def collapse_sba_to_county_year(df):
         "dist_median_prev5", "dist_median_next5",
         "default_rate_prev5", "default_rate_next5",
         "pif_rate_prev5", "pif_rate_next5",
-        "loan_growth_prev5", "loan_growth_next5",
-        # add more if needed
+        "loan_growth_prev5", "loan_growth_next5"
     ]
     mean_vars = [c for c in mean_vars if c in df.columns]
 
     # columns to sum
-    sum_vars = ["n_loans"]
+    sum_vars = ["n_loans", "n_branches_next5", "n_branches_prev5"]
     sum_vars = [c for c in sum_vars if c in df.columns]
 
     # closure flags: max() = "did any bank have a closure in this county-year?"
@@ -126,6 +125,16 @@ def collapse_sba_to_county_year(df):
     agg_dict.update({c: "max" for c in max_vars})
 
     df_cy = df.groupby(id_vars).agg(agg_dict).reset_index()
+
+    # --- Total loan growth: within-county, year-on-year percent change ---
+    df_cy = df_cy.sort_values(["county", "year"])
+    df_cy["n_loans_lag"] = df_cy.groupby("county")["n_loans"].shift(1)
+
+    df_cy["total_loan_growth"] = (
+        (df_cy["n_loans"] - df_cy["n_loans_lag"]) / df_cy["n_loans_lag"]
+    ) * 100
+    df_cy.loc[df_cy["n_loans_lag"] == 0, "total_loan_growth"] = np.nan
+
     return df_cy
 
 def add_branch_numbers(df):
