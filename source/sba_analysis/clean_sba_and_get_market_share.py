@@ -34,23 +34,35 @@ FLAG_COLS_FOR_SUMMARY = ["closure", "exog_closure", "true_exog_closure"]
 
 
 def main():
-    # ensure output dirs exist
-    DERIVED_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_DESCR_DIR.mkdir(parents=True, exist_ok=True)
-
     loans, sod, sod_branch_geo = load_data()
     loans_with_cty = attach_borrower_county(loans, sod_branch_geo)
+
+    # mkt: branch–county–year with market share + flags
     mkt = compute_branch_market_share(
         loans_with_cty,
         sod,
-        loan_amount_col="GrossApproval",  # change if your amount col is different
-        deposit_col="DEPSUMBR",            # SoD branch deposit variable
+        loan_amount_col="GrossApproval",
+        deposit_col="DEPSUMBR",
     )
-    out_panel_path = DERIVED_DIR / "sba_branch_market_share_bcy_with_flags.csv"
-    mkt.to_csv(out_panel_path, index=False)
-    print(f"Saved branch–county–year market share panel to: {out_panel_path}")
 
-    summarize_market_share(mkt)
+    # make sure bank id is present in mkt (if not, merge from loans)
+    if BANK_COL not in mkt.columns:
+        bank_ids = (
+            loans_with_cty[[BRANCH_COL, COUNTY_COL, YEAR_COL, BANK_COL]]
+            .drop_duplicates()
+        )
+        mkt = mkt.merge(
+            bank_ids,
+            on=[BRANCH_COL, COUNTY_COL, YEAR_COL],
+            how="left",
+        )
+    bcy = collapse_sba_to_bcy(mkt, high_share_threshold=0.2)
+    cy = collapse_to_cy(bcy)
+
+    DERIVED_DIR.mkdir(parents=True, exist_ok=True)
+    bcy.to_csv(DERIVED_DIR / "sba_bcy_market_share_flags.csv", index=False)
+    cy.to_csv(DERIVED_DIR / "sba_cy_market_share_flags.csv", index=False)
+
 
 
 def load_data(
@@ -329,6 +341,146 @@ def summarize_market_share(mkt: pd.DataFrame) -> None:
     plt.close(fig)
 
     print(f"Saved histogram figure to {fig_path}")
+
+def collapse_sba_to_bcy(
+    df: pd.DataFrame,
+    high_share_threshold: float = 0.2,
+) -> pd.DataFrame:
+    """
+    Collapse branch-level SBA+SoD panel to bank–borrower-county–year (bcy).
+
+    Expects columns:
+      - BANK_COL (e.g. 'loan_cert')
+      - BRANCH_COL (e.g. 'branch_id')
+      - COUNTY_COL (e.g. 'borrower_county')
+      - YEAR_COL (e.g. 'year')
+      - 'loan_mkt_share'
+      - 'closure', 'exog_closure', 'true_exog_closure'
+
+    Creates:
+      - n_branches: number of branches active (distinct branch_id)
+      - any_closure, any_exog_closure, any_true_exog: 0/1 indicators
+      - n_closure, n_exog_closure, n_true_exog: counts of closing branches
+      - combined_market_share_of_closure: sum loan_mkt_share over closing branches
+      - high_market_share_closure: 1 if any closing branch has
+                                   loan_mkt_share >= high_share_threshold
+    """
+    keys = [BANK_COL, COUNTY_COL, YEAR_COL]
+
+    # make sure closure flags are treated as 0/1
+    for col in ["closure", "exog_closure", "true_exog_closure"]:
+        if col in df.columns:
+            df[col] = df[col].fillna(0).astype(int)
+
+    # ------------------------------------------------------------------
+    # 1. Core aggregations at bank–county–year
+    # ------------------------------------------------------------------
+    bcy_core = (
+        df
+        .groupby(keys, as_index=False)
+        .agg(
+            n_branches=(BRANCH_COL, "nunique"),
+            n_closure=("closure", "sum"),
+            n_exog_closure=("exog_closure", "sum"),
+            n_true_exog=("true_exog_closure", "sum"),
+        )
+    )
+
+    # indicator versions
+    bcy_core["any_closure"] = (bcy_core["n_closure"] > 0).astype(int)
+    bcy_core["any_exog_closure"] = (bcy_core["n_exog_closure"] > 0).astype(int)
+    bcy_core["any_true_exog"] = (bcy_core["n_true_exog"] > 0).astype(int)
+
+    # ------------------------------------------------------------------
+    # 2. Combined market share of closure branches
+    # ------------------------------------------------------------------
+    closure_df = df[df["closure"] == 1]
+
+    ms_closure = (
+        closure_df
+        .groupby(keys, as_index=False)["loan_mkt_share"]
+        .sum()
+        .rename(columns={"loan_mkt_share": "combined_market_share_of_closure"})
+    )
+
+    # ------------------------------------------------------------------
+    # 3. High-market-share closure indicator
+    # ------------------------------------------------------------------
+    max_ms_closure = (
+        closure_df
+        .groupby(keys, as_index=False)["loan_mkt_share"]
+        .max()
+        .rename(columns={"loan_mkt_share": "max_closure_mkt_share"})
+    )
+
+    bcy = (
+        bcy_core
+        .merge(ms_closure, on=keys, how="left")
+        .merge(max_ms_closure, on=keys, how="left")
+    )
+
+    # fill NaNs for groups with no closure
+    bcy["combined_market_share_of_closure"] = (
+        bcy["combined_market_share_of_closure"].fillna(0.0)
+    )
+    bcy["max_closure_mkt_share"] = bcy["max_closure_mkt_share"].fillna(0.0)
+
+    bcy["high_market_share_closure"] = (
+        (bcy["max_closure_mkt_share"] >= high_share_threshold).astype(int)
+    )
+
+    # optional: drop the helper max column
+    bcy = bcy.drop(columns=["max_closure_mkt_share"])
+
+    return bcy
+
+
+def collapse_to_cy(bcy: pd.DataFrame) -> pd.DataFrame:
+    """
+    Collapse bank–county–year panel to county–year.
+
+    Expects bcy from `collapse_sba_to_bcy()` with columns:
+      - BANK_COL
+      - COUNTY_COL
+      - YEAR_COL
+      - n_branches, n_closure, n_exog_closure, n_true_exog
+      - any_closure, any_exog_closure, any_true_exog
+      - combined_market_share_of_closure
+      - high_market_share_closure
+
+    Produces county-year level:
+      - n_banks: number of banks active in county-year
+      - total_branches: total branches active in county-year
+      - any_*: 1 if any bank has that flag
+      - n_*: sums across banks
+      - combined_market_share_of_closure: sum over banks
+      - high_market_share_closure: 1 if any bank has high_market_share_closure
+    """
+    grp = bcy.groupby([COUNTY_COL, YEAR_COL], as_index=False)
+
+    cy = grp.agg(
+        n_banks=(BANK_COL, "nunique"),
+        total_branches=("n_branches", "sum"),
+        n_closure=("n_closure", "sum"),
+        n_exog_closure=("n_exog_closure", "sum"),
+        n_true_exog=("n_true_exog", "sum"),
+        any_closure=("any_closure", "max"),
+        any_exog_closure=("any_exog_closure", "max"),
+        any_true_exog=("any_true_exog", "max"),
+        combined_market_share_of_closure=("combined_market_share_of_closure", "sum"),
+        high_market_share_closure=("high_market_share_closure", "max"),
+    )
+
+    # force indicators to be 0/1 ints
+    for col in [
+        "any_closure",
+        "any_exog_closure",
+        "any_true_exog",
+        "high_market_share_closure",
+    ]:
+        cy[col] = cy[col].fillna(0).astype(int)
+
+    return cy
 
 
 if __name__ == "__main__":
