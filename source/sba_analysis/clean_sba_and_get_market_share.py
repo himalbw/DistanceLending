@@ -45,11 +45,11 @@ def main():
     )
 
     bcy = collapse_sba_to_bcy(loans_with_cty, mkt, high_share_threshold=0.2)
-    #cy  = collapse_to_cy(bcy)
+    cy  = collapse_to_cy(bcy)
 
     DERIVED_DIR.mkdir(parents=True, exist_ok=True)
     bcy.to_csv(DERIVED_DIR / "sba_bcy_market_share_flags.csv", index=False)
-    #cy.to_csv(DERIVED_DIR / "sba_cy_market_share_flags.csv", index=False)
+    cy.to_csv(DERIVED_DIR / "sba_cy_market_share_flags.csv", index=False)
 
 
 
@@ -483,6 +483,97 @@ def collapse_sba_to_bcy(
     bcy = bcy.drop(columns=["max_closure_mkt_share"])
 
     return bcy
+
+def collapse_to_cy(bcy: pd.DataFrame) -> pd.DataFrame:
+    """
+    Collapse bank–county–year panel to county–year.
+
+    Expects `bcy` from collapse_sba_to_bcy() with:
+      - BANK_COL, COUNTY_COL, YEAR_COL
+      - n_branches, n_closure, n_exog_closure, n_true_exog
+      - any_closure, any_exog_closure, any_true_exog
+      - combined_market_share_of_closure, high_market_share_closure
+      - n_loans, total_gross_approval, total_sba_guaranteed
+      - avg_distance_miles, med_distance_miles
+      - n_chgoff, n_pif, n_cancld
+    """
+    bcy = bcy.copy()
+    keys_cy = [COUNTY_COL, YEAR_COL]
+
+    # ------------------------------------------------------------------
+    # 1. Base county-year aggregations
+    # ------------------------------------------------------------------
+    cy = (
+        bcy
+        .groupby(keys_cy, as_index=False)
+        .agg(
+            n_banks=(BANK_COL, "nunique"),
+            total_branches=("n_branches", "sum"),
+
+            n_closure=("n_closure", "sum"),
+            n_exog_closure=("n_exog_closure", "sum"),
+            n_true_exog=("n_true_exog", "sum"),
+
+            any_closure=("any_closure", "max"),
+            any_exog_closure=("any_exog_closure", "max"),
+            any_true_exog=("any_true_exog", "max"),
+
+            combined_market_share_of_closure=(
+                "combined_market_share_of_closure", "sum"
+            ),
+            high_market_share_closure=("high_market_share_closure", "max"),
+
+            n_loans=("n_loans", "sum"),
+            total_gross_approval=("total_gross_approval", "sum"),
+            total_sba_guaranteed=("total_sba_guaranteed", "sum"),
+
+            n_chgoff=("n_chgoff", "sum"),
+            n_pif=("n_pif", "sum"),
+            n_cancld=("n_cancld", "sum"),
+        )
+    )
+
+    # recompute county-level rates
+    cy["default_rate"] = cy["n_chgoff"] / cy["n_loans"]
+    cy["pct_chgoff"]   = cy["n_chgoff"] / cy["n_loans"]
+    cy["pct_pif"]      = cy["n_pif"] / cy["n_loans"]
+    cy["pct_cancld"]   = cy["n_cancld"] / cy["n_loans"]
+
+    # ------------------------------------------------------------------
+    # 2. Distance: loan-weighted avg, plus median of bank-level medians
+    # ------------------------------------------------------------------
+    dist_tmp = (
+        bcy
+        .assign(weighted_dist=lambda d: d["avg_distance_miles"] * d["n_loans"])
+        .groupby(keys_cy, as_index=False)
+        .agg(
+            sum_weighted_dist=("weighted_dist", "sum"),
+            sum_n_loans=("n_loans", "sum"),
+            med_distance_miles=("med_distance_miles", "median"),
+        )
+    )
+    dist_tmp["avg_distance_miles"] = (
+        dist_tmp["sum_weighted_dist"] / dist_tmp["sum_n_loans"]
+    )
+
+    cy = cy.merge(
+        dist_tmp[[COUNTY_COL, YEAR_COL, "avg_distance_miles", "med_distance_miles"]],
+        on=keys_cy,
+        how="left",
+    )
+
+    # ------------------------------------------------------------------
+    # 3. Clean indicator columns to 0/1 ints
+    # ------------------------------------------------------------------
+    for col in [
+        "any_closure",
+        "any_exog_closure",
+        "any_true_exog",
+        "high_market_share_closure",
+    ]:
+        cy[col] = cy[col].fillna(0).astype(int)
+
+    return cy
 
 
 if __name__ == "__main__":
