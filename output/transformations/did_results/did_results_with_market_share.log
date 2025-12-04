@@ -4,7 +4,7 @@
 [BANK×COUNTY×YEAR]
 Outcome: dist_mean_next5
 Treatment: any_closure
-Timestamp: 2025-12-03 17:44:13.598675
+Timestamp: 2025-12-03 20:49:12.695346
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -13,7 +13,7 @@ Dep. Variable:        dist_mean_next5   R-squared:                          0.92
 Estimator:               Absorbing LS   Adj. R-squared:                     0.9261
 No. Observations:              215885   F-statistic:                        6518.7
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:13   Distribution:                      chi2(2)
+Time:                        20:49:12   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.8507
                                         Variables Absorbed:                 5473.0
                                 Parameter Estimates                                
@@ -30,7 +30,7 @@ dist_mean_prev5     0.8929     0.0112     79.588     0.0000      0.8709      0.9
 [BANK×COUNTY×YEAR]
 Outcome: dist_mean_next5
 Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:44:19.909510
+Timestamp: 2025-12-03 20:49:20.661172
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -39,7 +39,7 @@ Dep. Variable:        dist_mean_next5   R-squared:                          0.92
 Estimator:               Absorbing LS   Adj. R-squared:                     0.9260
 No. Observations:              215885   F-statistic:                        6374.7
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:19   Distribution:                      chi2(2)
+Time:                        20:49:20   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.8507
                                         Variables Absorbed:                 5473.0
                                 Parameter Estimates                                 
@@ -56,7 +56,7 @@ dist_mean_prev5      0.8927     0.0112     79.623     0.0000      0.8708      0.
 [BANK×COUNTY×YEAR]
 Outcome: dist_mean_next5
 Treatment: any_true_exog
-Timestamp: 2025-12-03 17:44:27.255449
+Timestamp: 2025-12-03 20:49:28.450819
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -65,7 +65,7 @@ Dep. Variable:        dist_mean_next5   R-squared:                          0.92
 Estimator:               Absorbing LS   Adj. R-squared:                     0.9260
 No. Observations:              215885   F-statistic:                        6921.7
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:27   Distribution:                      chi2(2)
+Time:                        20:49:28   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.8507
                                         Variables Absorbed:                 5473.0
                                 Parameter Estimates                                
@@ -82,7 +82,7 @@ dist_mean_prev5     0.8927     0.0112     79.616     0.0000      0.8707      0.9
 [BANK×COUNTY×YEAR]
 Outcome: dist_median_next5
 Treatment: any_closure
-Timestamp: 2025-12-03 17:44:35.360407
+Timestamp: 2025-12-03 20:49:36.392102
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -91,7 +91,7 @@ Dep. Variable:      dist_median_next5   R-squared:                          0.92
 Estimator:               Absorbing LS   Adj. R-squared:                     0.9254
 No. Observations:              215885   F-statistic:                        6350.1
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:35   Distribution:                      chi2(2)
+Time:                        20:49:36   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.8494
                                         Variables Absorbed:                 5473.0
                                  Parameter Estimates                                 
@@ -108,7 +108,7 @@ dist_median_prev5     0.8920     0.0114     78.516     0.0000      0.8697      0
 [BANK×COUNTY×YEAR]
 Outcome: dist_median_next5
 Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:44:43.445924
+Timestamp: 2025-12-03 20:49:44.548111
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -117,7 +117,7 @@ Dep. Variable:      dist_median_next5   R-squared:                          0.92
 Estimator:               Absorbing LS   Adj. R-squared:                     0.9253
 No. Observations:              215885   F-statistic:                        6205.7
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:43   Distribution:                      chi2(2)
+Time:                        20:49:44   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.8493
                                         Variables Absorbed:                 5473.0
                                  Parameter Estimates                                 
@@ -134,7 +134,7 @@ dist_median_prev5     0.8918     0.0114     78.551     0.0000      0.8696      0
 [BANK×COUNTY×YEAR]
 Outcome: dist_median_next5
 Treatment: any_true_exog
-Timestamp: 2025-12-03 17:44:51.308662
+Timestamp: 2025-12-03 20:49:52.614032
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -143,7 +143,7 @@ Dep. Variable:      dist_median_next5   R-squared:                          0.92
 Estimator:               Absorbing LS   Adj. R-squared:                     0.9253
 No. Observations:              215885   F-statistic:                        6750.2
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:51   Distribution:                      chi2(2)
+Time:                        20:49:52   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.8493
                                         Variables Absorbed:                 5473.0
                                  Parameter Estimates                                 
@@ -160,7 +160,7 @@ dist_median_prev5     0.8918     0.0114     78.544     0.0000      0.8695      0
 [BANK×COUNTY×YEAR]
 Outcome: default_rate_next5
 Treatment: any_closure
-Timestamp: 2025-12-03 17:44:57.066799
+Timestamp: 2025-12-03 20:49:58.340576
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -169,7 +169,7 @@ Dep. Variable:     default_rate_next5   R-squared:                          0.33
 Estimator:               Absorbing LS   Adj. R-squared:                     0.3161
 No. Observations:              215885   F-statistic:                        22.983
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:44:57   Distribution:                      chi2(2)
+Time:                        20:49:58   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0003
                                         Variables Absorbed:                 5473.0
                                  Parameter Estimates                                  
@@ -186,7 +186,7 @@ default_rate_prev5     0.0132     0.0032     4.0769     0.0000      0.0069      
 [BANK×COUNTY×YEAR]
 Outcome: default_rate_next5
 Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:45:02.176963
+Timestamp: 2025-12-03 20:50:04.187522
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -195,7 +195,7 @@ Dep. Variable:     default_rate_next5   R-squared:                          0.33
 Estimator:               Absorbing LS   Adj. R-squared:                     0.3161
 No. Observations:              215885   F-statistic:                        31.915
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:02   Distribution:                      chi2(2)
+Time:                        20:50:04   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0003
                                         Variables Absorbed:                 5473.0
                                  Parameter Estimates                                  
@@ -212,7 +212,7 @@ default_rate_prev5     0.0132     0.0032     4.0841     0.0000      0.0069      
 [BANK×COUNTY×YEAR]
 Outcome: default_rate_next5
 Treatment: any_true_exog
-Timestamp: 2025-12-03 17:45:07.439381
+Timestamp: 2025-12-03 20:50:10.192058
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -221,7 +221,7 @@ Dep. Variable:     default_rate_next5   R-squared:                          0.33
 Estimator:               Absorbing LS   Adj. R-squared:                     0.3161
 No. Observations:              215885   F-statistic:                        26.962
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:07   Distribution:                      chi2(2)
+Time:                        20:50:10   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0003
                                         Variables Absorbed:                 5473.0
                                  Parameter Estimates                                  
@@ -238,7 +238,7 @@ default_rate_prev5     0.0132     0.0032     4.0830     0.0000      0.0069      
 [BANK×COUNTY×YEAR]
 Outcome: pif_rate_next5
 Treatment: any_closure
-Timestamp: 2025-12-03 17:45:13.539844
+Timestamp: 2025-12-03 20:50:17.488792
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -247,7 +247,7 @@ Dep. Variable:         pif_rate_next5   R-squared:                          0.56
 Estimator:               Absorbing LS   Adj. R-squared:                     0.5555
 No. Observations:              215885   F-statistic:                        28.092
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:13   Distribution:                      chi2(2)
+Time:                        20:50:17   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0003
                                         Variables Absorbed:                 5473.0
                                Parameter Estimates                                
@@ -264,7 +264,7 @@ pif_rate_prev5     0.0163     0.0036     4.5700     0.0000      0.0093      0.02
 [BANK×COUNTY×YEAR]
 Outcome: pif_rate_next5
 Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:45:19.717222
+Timestamp: 2025-12-03 20:50:24.578564
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -273,7 +273,7 @@ Dep. Variable:         pif_rate_next5   R-squared:                          0.56
 Estimator:               Absorbing LS   Adj. R-squared:                     0.5554
 No. Observations:              215885   F-statistic:                        20.985
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:19   Distribution:                      chi2(2)
+Time:                        20:50:24   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0003
                                         Variables Absorbed:                 5473.0
                                 Parameter Estimates                                 
@@ -290,7 +290,7 @@ pif_rate_prev5       0.0163     0.0036     4.5805     0.0000      0.0093      0.
 [BANK×COUNTY×YEAR]
 Outcome: pif_rate_next5
 Treatment: any_true_exog
-Timestamp: 2025-12-03 17:45:26.073245
+Timestamp: 2025-12-03 20:50:31.743600
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -299,7 +299,7 @@ Dep. Variable:         pif_rate_next5   R-squared:                          0.56
 Estimator:               Absorbing LS   Adj. R-squared:                     0.5555
 No. Observations:              215885   F-statistic:                        24.214
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:26   Distribution:                      chi2(2)
+Time:                        20:50:31   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0003
                                         Variables Absorbed:                 5473.0
                                Parameter Estimates                                
@@ -316,7 +316,7 @@ pif_rate_prev5     0.0163     0.0036     4.5783     0.0000      0.0093      0.02
 [BANK×COUNTY×YEAR]
 Outcome: n_loans_next5
 Treatment: any_closure
-Timestamp: 2025-12-03 17:45:33.051155
+Timestamp: 2025-12-03 20:50:39.916876
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -325,7 +325,7 @@ Dep. Variable:          n_loans_next5   R-squared:                          0.38
 Estimator:               Absorbing LS   Adj. R-squared:                     0.3669
 No. Observations:              215885   F-statistic:                        377.80
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:33   Distribution:                      chi2(2)
+Time:                        20:50:39   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.2198
                                         Variables Absorbed:                 5473.0
                                Parameter Estimates                               
@@ -342,7 +342,7 @@ n_loans_prev5     0.4641     0.0676     6.8617     0.0000      0.3316      0.596
 [BANK×COUNTY×YEAR]
 Outcome: n_loans_next5
 Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:45:40.847632
+Timestamp: 2025-12-03 20:50:47.165097
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -351,7 +351,7 @@ Dep. Variable:          n_loans_next5   R-squared:                          0.38
 Estimator:               Absorbing LS   Adj. R-squared:                     0.3641
 No. Observations:              215885   F-statistic:                        67.120
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:40   Distribution:                      chi2(2)
+Time:                        20:50:47   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.2163
                                         Variables Absorbed:                 5473.0
                                 Parameter Estimates                                 
@@ -368,7 +368,7 @@ n_loans_prev5        0.4716     0.0672     7.0157     0.0000      0.3399      0.
 [BANK×COUNTY×YEAR]
 Outcome: n_loans_next5
 Treatment: any_true_exog
-Timestamp: 2025-12-03 17:45:48.488996
+Timestamp: 2025-12-03 20:50:54.757581
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -377,7 +377,7 @@ Dep. Variable:          n_loans_next5   R-squared:                          0.38
 Estimator:               Absorbing LS   Adj. R-squared:                     0.3641
 No. Observations:              215885   F-statistic:                        65.473
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:48   Distribution:                      chi2(2)
+Time:                        20:50:54   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.2163
                                         Variables Absorbed:                 5473.0
                                Parameter Estimates                               
@@ -394,7 +394,7 @@ n_loans_prev5     0.4715     0.0673     7.0107     0.0000      0.3397      0.603
 [BANK×COUNTY×YEAR]
 Outcome: loan_growth_next5
 Treatment: any_closure
-Timestamp: 2025-12-03 17:45:54.173347
+Timestamp: 2025-12-03 20:51:00.458639
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -403,7 +403,7 @@ Dep. Variable:      loan_growth_next5   R-squared:                          0.09
 Estimator:               Absorbing LS   Adj. R-squared:                     0.0648
 No. Observations:              184860   F-statistic:                        256.00
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:54   Distribution:                      chi2(2)
+Time:                        20:51:00   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0043
                                         Variables Absorbed:                 4996.0
                                  Parameter Estimates                                 
@@ -420,7 +420,7 @@ loan_growth_prev5    -0.0466     0.0056    -8.3635     0.0000     -0.0575     -0
 [BANK×COUNTY×YEAR]
 Outcome: loan_growth_next5
 Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:45:59.444516
+Timestamp: 2025-12-03 20:51:06.523527
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -429,7 +429,7 @@ Dep. Variable:      loan_growth_next5   R-squared:                          0.08
 Estimator:               Absorbing LS   Adj. R-squared:                     0.0640
 No. Observations:              184860   F-statistic:                        72.020
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:45:59   Distribution:                      chi2(2)
+Time:                        20:51:06   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0035
                                         Variables Absorbed:                 4996.0
                                  Parameter Estimates                                 
@@ -446,7 +446,7 @@ loan_growth_prev5    -0.0466     0.0056    -8.3808     0.0000     -0.0575     -0
 [BANK×COUNTY×YEAR]
 Outcome: loan_growth_next5
 Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:04.769014
+Timestamp: 2025-12-03 20:51:12.803597
 ============================================
 
                          Absorbing LS Estimation Summary                          
@@ -455,7 +455,7 @@ Dep. Variable:      loan_growth_next5   R-squared:                          0.08
 Estimator:               Absorbing LS   Adj. R-squared:                     0.0640
 No. Observations:              184860   F-statistic:                        78.419
 Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:04   Distribution:                      chi2(2)
+Time:                        20:51:12   Distribution:                      chi2(2)
 Cov. Estimator:             clustered   R-squared (No Effects):             0.0035
                                         Variables Absorbed:                 4996.0
                                  Parameter Estimates                                 
@@ -465,472 +465,4 @@ Cov. Estimator:             clustered   R-squared (No Effects):             0.00
 const                 0.3152     0.0043     74.004     0.0000      0.3069      0.3236
 any_true_exog        -0.1039     0.0351    -2.9624     0.0031     -0.1726     -0.0352
 loan_growth_prev5    -0.0466     0.0056    -8.3828     0.0000     -0.0575     -0.0357
-=====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: dist_mean_next5
-Treatment: any_closure
-Timestamp: 2025-12-03 17:46:04.953009
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:        dist_mean_next5   R-squared:                          0.7430
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7298
-No. Observations:               63914   F-statistic:                        2.5668
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.2771
-Time:                        17:46:04   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0009
-                                        Variables Absorbed:                 3112.0
-                                Parameter Estimates                                
-===================================================================================
-                 Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
------------------------------------------------------------------------------------
-const               115.14     3.4378     33.494     0.0000      108.41      121.88
-any_closure         1.9929     1.6837     1.1836     0.2366     -1.3071      5.2929
-dist_mean_prev5     0.0470     0.0454     1.0340     0.3011     -0.0421      0.1360
-===================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: dist_mean_next5
-Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:46:05.113669
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:        dist_mean_next5   R-squared:                          0.7430
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7299
-No. Observations:               63914   F-statistic:                        12.186
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0023
-Time:                        17:46:05   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0010
-                                        Variables Absorbed:                 3112.0
-                                Parameter Estimates                                 
-====================================================================================
-                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
-------------------------------------------------------------------------------------
-const                115.28     3.4417     33.494     0.0000      108.53      122.02
-any_exog_closure     11.914     3.4945     3.4094     0.0007      5.0652      18.763
-dist_mean_prev5      0.0468     0.0454     1.0298     0.3031     -0.0423      0.1358
-====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: dist_mean_next5
-Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:05.266224
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:        dist_mean_next5   R-squared:                          0.7431
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7299
-No. Observations:               63914   F-statistic:                        19.762
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0001
-Time:                        17:46:05   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0011
-                                        Variables Absorbed:                 3112.0
-                                Parameter Estimates                                
-===================================================================================
-                 Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
------------------------------------------------------------------------------------
-const               115.27     3.4399     33.511     0.0000      108.53      122.02
-any_true_exog       25.161     5.7481     4.3773     0.0000      13.895      36.427
-dist_mean_prev5     0.0466     0.0454     1.0263     0.3047     -0.0424      0.1356
-===================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: dist_median_next5
-Treatment: any_closure
-Timestamp: 2025-12-03 17:46:05.420739
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:      dist_median_next5   R-squared:                          0.7415
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7282
-No. Observations:               63914   F-statistic:                        0.1509
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.9273
-Time:                        17:46:05   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0001
-                                        Variables Absorbed:                 3112.0
-                                 Parameter Estimates                                 
-=====================================================================================
-                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
--------------------------------------------------------------------------------------
-const                 86.131     2.6489     32.516     0.0000      80.940      91.323
-any_closure          -0.1248     1.6499    -0.0756     0.9397     -3.3585      3.1090
-dist_median_prev5     0.0189     0.0493     0.3839     0.7010     -0.0778      0.1156
-=====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: dist_median_next5
-Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:46:05.581791
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:      dist_median_next5   R-squared:                          0.7415
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7283
-No. Observations:               63914   F-statistic:                        4.0950
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.1291
-Time:                        17:46:05   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0001
-                                        Variables Absorbed:                 3112.0
-                                 Parameter Estimates                                 
-=====================================================================================
-                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
--------------------------------------------------------------------------------------
-const                 86.074     2.6486     32.498     0.0000      80.883      91.265
-any_exog_closure      4.9255     2.5367     1.9417     0.0522     -0.0464      9.8974
-dist_median_prev5     0.0189     0.0493     0.3823     0.7023     -0.0779      0.1156
-=====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: dist_median_next5
-Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:05.742600
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:      dist_median_next5   R-squared:                          0.7415
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7283
-No. Observations:               63914   F-statistic:                        1.7907
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.4085
-Time:                        17:46:05   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0001
-                                        Variables Absorbed:                 3112.0
-                                 Parameter Estimates                                 
-=====================================================================================
-                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
--------------------------------------------------------------------------------------
-const                 86.096     2.6484     32.508     0.0000      80.905      91.287
-any_true_exog         4.4938     3.6838     1.2199     0.2225     -2.7264      11.714
-dist_median_prev5     0.0189     0.0493     0.3830     0.7017     -0.0778      0.1156
-=====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: default_rate_next5
-Treatment: any_closure
-Timestamp: 2025-12-03 17:46:05.899202
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:     default_rate_next5   R-squared:                          0.5701
-Estimator:               Absorbing LS   Adj. R-squared:                     0.5481
-No. Observations:               63914   F-statistic:                        402.88
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:05   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0367
-                                        Variables Absorbed:                 3112.0
-                                 Parameter Estimates                                  
-======================================================================================
-                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
---------------------------------------------------------------------------------------
-const                  0.1073     0.0009     118.46     0.0000      0.1055      0.1091
-any_closure           -0.0014     0.0008    -1.7237     0.0848     -0.0030      0.0002
-default_rate_prev5    -0.1509     0.0076    -19.844     0.0000     -0.1658     -0.1360
-======================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: default_rate_next5
-Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:46:06.048206
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:     default_rate_next5   R-squared:                          0.5701
-Estimator:               Absorbing LS   Adj. R-squared:                     0.5481
-No. Observations:               63914   F-statistic:                        397.24
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0367
-                                        Variables Absorbed:                 3112.0
-                                 Parameter Estimates                                  
-======================================================================================
-                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
---------------------------------------------------------------------------------------
-const                  0.1072     0.0009     118.17     0.0000      0.1054      0.1089
-any_exog_closure      -0.0034     0.0021    -1.5930     0.1112     -0.0076      0.0008
-default_rate_prev5    -0.1509     0.0076    -19.842     0.0000     -0.1658     -0.1360
-======================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: default_rate_next5
-Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:06.201301
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:     default_rate_next5   R-squared:                          0.5701
-Estimator:               Absorbing LS   Adj. R-squared:                     0.5481
-No. Observations:               63914   F-statistic:                        403.59
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0367
-                                        Variables Absorbed:                 3112.0
-                                 Parameter Estimates                                  
-======================================================================================
-                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
---------------------------------------------------------------------------------------
-const                  0.1072     0.0009     118.18     0.0000      0.1054      0.1089
-any_true_exog         -0.0063     0.0023    -2.7373     0.0062     -0.0109     -0.0018
-default_rate_prev5    -0.1509     0.0076    -19.843     0.0000     -0.1658     -0.1360
-======================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: pif_rate_next5
-Treatment: any_closure
-Timestamp: 2025-12-03 17:46:06.351085
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:         pif_rate_next5   R-squared:                          0.8029
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7928
-No. Observations:               63914   F-statistic:                        375.43
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0249
-                                        Variables Absorbed:                 3112.0
-                               Parameter Estimates                                
-==================================================================================
-                Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
-----------------------------------------------------------------------------------
-const              0.6798     0.0059     116.08     0.0000      0.6683      0.6913
-any_closure        0.0019     0.0014     1.3562     0.1750     -0.0008      0.0045
-pif_rate_prev5    -0.1585     0.0082    -19.265     0.0000     -0.1746     -0.1423
-==================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: pif_rate_next5
-Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:46:06.508869
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:         pif_rate_next5   R-squared:                          0.8029
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7928
-No. Observations:               63914   F-statistic:                        373.00
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0249
-                                        Variables Absorbed:                 3112.0
-                                Parameter Estimates                                 
-====================================================================================
-                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
-------------------------------------------------------------------------------------
-const                0.6800     0.0058     116.29     0.0000      0.6686      0.6915
-any_exog_closure    -0.0034     0.0029    -1.1467     0.2515     -0.0091      0.0024
-pif_rate_prev5      -0.1585     0.0082    -19.265     0.0000     -0.1746     -0.1423
-====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: pif_rate_next5
-Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:06.662668
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:         pif_rate_next5   R-squared:                          0.8029
-Estimator:               Absorbing LS   Adj. R-squared:                     0.7928
-No. Observations:               63914   F-statistic:                        371.26
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0249
-                                        Variables Absorbed:                 3112.0
-                               Parameter Estimates                                
-==================================================================================
-                Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
-----------------------------------------------------------------------------------
-const              0.6800     0.0058     116.28     0.0000      0.6685      0.6915
-any_true_exog      0.0017     0.0037     0.4632     0.6432     -0.0055      0.0089
-pif_rate_prev5    -0.1585     0.0082    -19.266     0.0000     -0.1746     -0.1424
-==================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: n_loans_next5
-Treatment: any_closure
-Timestamp: 2025-12-03 17:46:06.816286
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:          n_loans_next5   R-squared:                          0.8912
-Estimator:               Absorbing LS   Adj. R-squared:                     0.8856
-No. Observations:               63914   F-statistic:                        144.52
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0330
-                                        Variables Absorbed:                 3112.0
-                               Parameter Estimates                               
-=================================================================================
-               Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
----------------------------------------------------------------------------------
-const             25.318     0.3465     73.057     0.0000      24.639      25.997
-any_closure       4.0065     0.5458     7.3401     0.0000      2.9367      5.0764
-n_loans_prev5    -0.1635     0.0162    -10.085     0.0000     -0.1953     -0.1317
-=================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: n_loans_next5
-Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:46:06.971971
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:          n_loans_next5   R-squared:                          0.8912
-Estimator:               Absorbing LS   Adj. R-squared:                     0.8856
-No. Observations:               63914   F-statistic:                        127.12
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:06   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0326
-                                        Variables Absorbed:                 3112.0
-                                Parameter Estimates                                 
-====================================================================================
-                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
-------------------------------------------------------------------------------------
-const                25.642     0.3666     69.943     0.0000      24.924      26.361
-any_exog_closure     10.026     4.4394     2.2584     0.0239      1.3249      18.727
-n_loans_prev5       -0.1614     0.0165    -9.8021     0.0000     -0.1936     -0.1291
-====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: n_loans_next5
-Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:07.127009
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:          n_loans_next5   R-squared:                          0.8910
-Estimator:               Absorbing LS   Adj. R-squared:                     0.8854
-No. Observations:               63914   F-statistic:                        109.87
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:07   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0313
-                                        Variables Absorbed:                 3112.0
-                               Parameter Estimates                               
-=================================================================================
-               Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
----------------------------------------------------------------------------------
-const             25.744     0.3658     70.385     0.0000      25.027      26.461
-any_true_exog     2.2848     7.9219     0.2884     0.7730     -13.242      17.812
-n_loans_prev5    -0.1622     0.0164    -9.8639     0.0000     -0.1944     -0.1300
-=================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: loan_growth_next5
-Treatment: any_closure
-Timestamp: 2025-12-03 17:46:07.273104
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:      loan_growth_next5   R-squared:                          0.2368
-Estimator:               Absorbing LS   Adj. R-squared:                     0.1961
-No. Observations:               60829   F-statistic:                        300.17
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:07   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0117
-                                        Variables Absorbed:                 3078.0
-                                 Parameter Estimates                                 
-=====================================================================================
-                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
--------------------------------------------------------------------------------------
-const                 0.3088     0.0020     156.21     0.0000      0.3049      0.3126
-any_closure          -0.0528     0.0056    -9.5195     0.0000     -0.0637     -0.0420
-loan_growth_prev5    -0.0956     0.0072    -13.202     0.0000     -0.1097     -0.0814
-=====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: loan_growth_next5
-Treatment: any_exog_closure
-Timestamp: 2025-12-03 17:46:07.416279
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:      loan_growth_next5   R-squared:                          0.2358
-Estimator:               Absorbing LS   Adj. R-squared:                     0.1950
-No. Observations:               60829   F-statistic:                        185.57
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:07   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0104
-                                        Variables Absorbed:                 3078.0
-                                 Parameter Estimates                                 
-=====================================================================================
-                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
--------------------------------------------------------------------------------------
-const                 0.3027     0.0019     156.09     0.0000      0.2989      0.3065
-any_exog_closure     -0.0257     0.0098    -2.6256     0.0087     -0.0449     -0.0065
-loan_growth_prev5    -0.0954     0.0072    -13.205     0.0000     -0.1096     -0.0813
-=====================================================================================
-
-
-============================================
-[COUNTY×YEAR]
-Outcome: loan_growth_next5
-Treatment: any_true_exog
-Timestamp: 2025-12-03 17:46:07.562035
-============================================
-
-                         Absorbing LS Estimation Summary                          
-==================================================================================
-Dep. Variable:      loan_growth_next5   R-squared:                          0.2358
-Estimator:               Absorbing LS   Adj. R-squared:                     0.1950
-No. Observations:               60829   F-statistic:                        183.65
-Date:                Wed, Dec 03 2025   P-value (F-stat):                   0.0000
-Time:                        17:46:07   Distribution:                      chi2(2)
-Cov. Estimator:             clustered   R-squared (No Effects):             0.0104
-                                        Variables Absorbed:                 3078.0
-                                 Parameter Estimates                                 
-=====================================================================================
-                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
--------------------------------------------------------------------------------------
-const                 0.3026     0.0019     155.76     0.0000      0.2988      0.3064
-any_true_exog        -0.0330     0.0109    -3.0328     0.0024     -0.0544     -0.0117
-loan_growth_prev5    -0.0954     0.0072    -13.205     0.0000     -0.1096     -0.0813
 =====================================================================================
