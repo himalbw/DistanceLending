@@ -238,13 +238,8 @@ main_cy <- function() {
   window_pre  <- 10
   window_post <- 10
   treatments <- c("any_closure", "any_exog_closure", "any_true_exog")
-  outcomes   <- c("dist_median",
-                  "dist_mean",
-                  "dist_median_next5",
-                  "n_branches_next5",
-                  "default_rate_next5",
-                  "loan_growth_next5", "total_loan_growth")
-  
+  outcomes   <- c("dist_median", "dist_median_next5", "dist_mean_next5", "dist_mean", "default_rate", "default_rate_next5", "loan_growth_next5")
+
   for (tr in treatments) {
     if (!tr %in% names(dt)) {
       message("Skipping treatment ", tr, " (not found in sba_cy).")
