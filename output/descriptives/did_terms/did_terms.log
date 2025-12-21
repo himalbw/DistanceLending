@@ -1,6 +1,6 @@
 ============================================
 DID Terms Run
-Timestamp: 2025-12-21 09:52:03.726643 
+Timestamp: 2025-12-21 09:59:07.438604 
 ============================================
 
 Loading BCY: source/sba_analysis/data/derived/sba_bcy_terms.csv 
@@ -265,65 +265,128 @@ RMSE: 12.5     Adj. R2: 0.365055
 
 ============================================
 [BCY]
-Outcome:total_gross_approval (next5)
+Outcome:loan_growth_yoy (next5)
 Treatment: closure 
-Controls: total_gross_approval_prev5 
+Controls: loan_growth_yoy_prev5 
 FE: loan_cert + county + year 
 Cluster: loan_cert 
 ============================================
-OLS estimation, Dep. Var.: total_gross_approval_next5
-Observations: 215,501
-Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+OLS estimation, Dep. Var.: loan_growth_yoy_next5
+Observations: 184,480
+Fixed-effects: loan_cert: 1,989,  county: 2,601,  year: 28
 Standard-errors: Clustered (loan_cert) 
-                               Estimate  Std. Error  t value  Pr(>|t|)    
-closure                    3.246866e+05 1.17649e+05  2.75979 0.0058302 ** 
-total_gross_approval_prev5 6.709470e-01 3.76510e-02 17.82029 < 2.2e-16 ***
+                       Estimate Std. Error  t value   Pr(>|t|)    
+closure               -0.105308   0.026837 -3.92397 9.0062e-05 ***
+loan_growth_yoy_prev5 -0.046594   0.013047 -3.57115 3.6387e-04 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 2,132,198.1     Adj. R2: 0.599163
-                    Within R2: 0.421245
+RMSE: 0.658687     Adj. R2: 0.065103
+                 Within R2: 0.004349
 
 
 ============================================
 [BCY]
-Outcome:total_gross_approval (next5)
+Outcome:loan_growth_yoy (next5)
 Treatment: exog_closure 
-Controls: total_gross_approval_prev5 
+Controls: loan_growth_yoy_prev5 
 FE: loan_cert + county + year 
 Cluster: loan_cert 
 ============================================
-OLS estimation, Dep. Var.: total_gross_approval_next5
-Observations: 215,501
-Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+OLS estimation, Dep. Var.: loan_growth_yoy_next5
+Observations: 184,480
+Fixed-effects: loan_cert: 1,989,  county: 2,601,  year: 28
 Standard-errors: Clustered (loan_cert) 
-                                Estimate   Std. Error   t value  Pr(>|t|)    
-exog_closure               -95965.078237 3.204744e+05 -0.299447   0.76463    
-total_gross_approval_prev5      0.673747 3.769700e-02 17.872797 < 2.2e-16 ***
+                       Estimate Std. Error  t value   Pr(>|t|)    
+exog_closure          -0.064632   0.035572 -1.81692 0.06938023 .  
+loan_growth_yoy_prev5 -0.046613   0.013017 -3.58097 0.00035053 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 2,132,964.8     Adj. R2: 0.598875
-                    Within R2: 0.420828
+RMSE: 0.658967     Adj. R2: 0.064307
+                 Within R2: 0.003502
 
 
 ============================================
 [BCY]
-Outcome:total_gross_approval (next5)
+Outcome:loan_growth_yoy (next5)
 Treatment: true_exog_closure 
-Controls: total_gross_approval_prev5 
+Controls: loan_growth_yoy_prev5 
 FE: loan_cert + county + year 
 Cluster: loan_cert 
 ============================================
-OLS estimation, Dep. Var.: total_gross_approval_next5
+OLS estimation, Dep. Var.: loan_growth_yoy_next5
+Observations: 184,480
+Fixed-effects: loan_cert: 1,989,  county: 2,601,  year: 28
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error  t value   Pr(>|t|)    
+true_exog_closure     -0.104153   0.037933 -2.74570 0.00609258 ** 
+loan_growth_yoy_prev5 -0.046612   0.013022 -3.57954 0.00035245 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.658962     Adj. R2: 0.064321
+                 Within R2: 0.003516
+
+
+============================================
+[BCY]
+Outcome:log_total_gross_approval (next5)
+Treatment: closure 
+Controls: log_total_gross_approval_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: log_total_gross_approval_next5
 Observations: 215,501
 Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
 Standard-errors: Clustered (loan_cert) 
-                                Estimate   Std. Error t value  Pr(>|t|)    
-true_exog_closure          -1.029538e+05 502460.14870 -0.2049   0.83767    
-total_gross_approval_prev5  6.737560e-01      0.03769 17.8763 < 2.2e-16 ***
+                               Estimate Std. Error  t value  Pr(>|t|)    
+closure                        0.200573   0.030268  6.62661 4.274e-11 ***
+log_total_gross_approval_prev5 0.362229   0.018473 19.60887 < 2.2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 2,132,966.3     Adj. R2: 0.598874
-                    Within R2: 0.420827
+RMSE: 0.902353     Adj. R2: 0.559091
+                 Within R2: 0.134956
+
+
+============================================
+[BCY]
+Outcome:log_total_gross_approval (next5)
+Treatment: exog_closure 
+Controls: log_total_gross_approval_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: log_total_gross_approval_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                               Estimate Std. Error  t value  Pr(>|t|)    
+exog_closure                   0.163747   0.065887  2.48527  0.013017 *  
+log_total_gross_approval_prev5 0.365140   0.018869 19.35103 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.903019     Adj. R2: 0.558439
+                 Within R2: 0.133677
+
+
+============================================
+[BCY]
+Outcome:log_total_gross_approval (next5)
+Treatment: true_exog_closure 
+Controls: log_total_gross_approval_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: log_total_gross_approval_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                               Estimate Std. Error  t value  Pr(>|t|)    
+true_exog_closure              0.237879   0.084416  2.81792 0.0048754 ** 
+log_total_gross_approval_prev5 0.365041   0.018828 19.38802 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.903009     Adj. R2: 0.558449
+                 Within R2: 0.133697
 
 
 ============================================
@@ -960,65 +1023,128 @@ RMSE: 25.5     Adj. R2: 0.885492
 
 ============================================
 [CY]
-Outcome:total_gross_approval (next5)
+Outcome:loan_growth_yoy (next5)
 Treatment: closure 
-Controls: total_gross_approval_prev5 
+Controls: loan_growth_yoy_prev5 
 FE: county + year 
 Cluster: county 
 ============================================
-OLS estimation, Dep. Var.: total_gross_approval_next5
-Observations: 63,859
-Fixed-effects: county: 3,051,  year: 29
+OLS estimation, Dep. Var.: loan_growth_yoy_next5
+Observations: 60,768
+Fixed-effects: county: 3,011,  year: 28
 Standard-errors: Clustered (county) 
-                               Estimate   Std. Error t value   Pr(>|t|)    
-closure                    6.408666e+05 2.706702e+05 2.36770 1.7961e-02 *  
-total_gross_approval_prev5 7.267760e-01 1.152660e-01 6.30519 3.2940e-10 ***
+                       Estimate Std. Error   t value  Pr(>|t|)    
+closure               -0.052613   0.005554  -9.47289 < 2.2e-16 ***
+loan_growth_yoy_prev5 -0.095500   0.007243 -13.18432 < 2.2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 5,748,609.0     Adj. R2: 0.950697
-                    Within R2: 0.535943
+RMSE: 0.385422     Adj. R2: 0.195362
+                 Within R2: 0.011708
 
 
 ============================================
 [CY]
-Outcome:total_gross_approval (next5)
+Outcome:loan_growth_yoy (next5)
 Treatment: exog_closure 
-Controls: total_gross_approval_prev5 
+Controls: loan_growth_yoy_prev5 
 FE: county + year 
 Cluster: county 
 ============================================
-OLS estimation, Dep. Var.: total_gross_approval_next5
-Observations: 63,859
-Fixed-effects: county: 3,051,  year: 29
+OLS estimation, Dep. Var.: loan_growth_yoy_next5
+Observations: 60,768
+Fixed-effects: county: 3,011,  year: 28
 Standard-errors: Clustered (county) 
-                                Estimate   Std. Error  t value   Pr(>|t|)    
-exog_closure               -2.488934e+06 833784.43046 -2.98511 2.8573e-03 ** 
-total_gross_approval_prev5  7.285360e-01      0.11544  6.31092 3.1758e-10 ***
+                       Estimate Std. Error   t value  Pr(>|t|)    
+exog_closure          -0.025074   0.009785  -2.56246  0.010442 *  
+loan_growth_yoy_prev5 -0.095365   0.007232 -13.18666 < 2.2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 5,746,541.7     Adj. R2: 0.950733
-                    Within R2: 0.536277
+RMSE: 0.385672     Adj. R2: 0.194318
+                 Within R2: 0.010425
 
 
 ============================================
 [CY]
-Outcome:total_gross_approval (next5)
+Outcome:loan_growth_yoy (next5)
 Treatment: true_exog_closure 
-Controls: total_gross_approval_prev5 
+Controls: loan_growth_yoy_prev5 
 FE: county + year 
 Cluster: county 
 ============================================
-OLS estimation, Dep. Var.: total_gross_approval_next5
+OLS estimation, Dep. Var.: loan_growth_yoy_next5
+Observations: 60,768
+Fixed-effects: county: 3,011,  year: 28
+Standard-errors: Clustered (county) 
+                       Estimate Std. Error   t value  Pr(>|t|)    
+true_exog_closure     -0.031817   0.010850  -2.93234 0.0033896 ** 
+loan_growth_yoy_prev5 -0.095369   0.007232 -13.18653 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.385673     Adj. R2: 0.194314
+                 Within R2: 0.01042 
+
+
+============================================
+[CY]
+Outcome:log_total_gross_approval (next5)
+Treatment: closure 
+Controls: log_total_gross_approval_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: log_total_gross_approval_next5
 Observations: 63,859
 Fixed-effects: county: 3,051,  year: 29
 Standard-errors: Clustered (county) 
-                                Estimate   Std. Error  t value   Pr(>|t|)    
-true_exog_closure          -4.907629e+06 2.279878e+06 -2.15258 3.1430e-02 *  
-total_gross_approval_prev5  7.292900e-01 1.153720e-01  6.32123 2.9735e-10 ***
+                               Estimate Std. Error  t value   Pr(>|t|)    
+closure                        0.059428   0.008103 7.333669 2.8554e-13 ***
+log_total_gross_approval_prev5 0.002711   0.010054 0.269649 7.8745e-01    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 5,741,324.9     Adj. R2: 0.950822
-                    Within R2: 0.537119
+RMSE: 0.588773     Adj. R2: 0.875705
+                 Within R2: 7.295e-4
+
+
+============================================
+[CY]
+Outcome:log_total_gross_approval (next5)
+Treatment: exog_closure 
+Controls: log_total_gross_approval_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: log_total_gross_approval_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                               Estimate Std. Error  t value Pr(>|t|) 
+exog_closure                   0.029210   0.017811 1.640054  0.10110 
+log_total_gross_approval_prev5 0.004067   0.010079 0.403557  0.68657 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.588977     Adj. R2: 0.875618
+                 Within R2: 3.644e-5
+
+
+============================================
+[CY]
+Outcome:log_total_gross_approval (next5)
+Treatment: true_exog_closure 
+Controls: log_total_gross_approval_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: log_total_gross_approval_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                               Estimate Std. Error  t value Pr(>|t|) 
+true_exog_closure              0.010126   0.022324 0.453598  0.65015 
+log_total_gross_approval_prev5 0.004091   0.010080 0.405830  0.68490 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.588983     Adj. R2: 0.875616
+                 Within R2: 1.697e-5
 
 
 ============================================
