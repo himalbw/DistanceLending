@@ -1,0 +1,1403 @@
+============================================
+DID Terms Run
+Timestamp: 2025-12-21 09:52:03.726643 
+============================================
+
+Loading BCY: source/sba_analysis/data/derived/sba_bcy_terms.csv 
+Loading CY : source/sba_analysis/data/derived/sba_cy_terms.csv 
+
+Building prev/next windows (k=5)...
+
+Running BCY DID...
+
+
+============================================
+[BCY]
+Outcome:avg_distance_miles (next5)
+Treatment: closure 
+Controls: avg_distance_miles_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: avg_distance_miles_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                         Estimate Std. Error  t value  Pr(>|t|)    
+closure                  8.369953   3.687241  2.26998  0.023302 *  
+avg_distance_miles_prev5 0.882516   0.038023 23.20980 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 69.2     Adj. R2: 0.934198
+             Within R2: 0.86586 
+
+
+============================================
+[BCY]
+Outcome:avg_distance_miles (next5)
+Treatment: exog_closure 
+Controls: avg_distance_miles_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: avg_distance_miles_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                          Estimate Std. Error  t value  Pr(>|t|)    
+exog_closure             11.586010   9.948555  1.16459   0.24431    
+avg_distance_miles_prev5  0.882371   0.038019 23.20890 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 69.2     Adj. R2: 0.934172
+             Within R2: 0.865807
+
+
+============================================
+[BCY]
+Outcome:avg_distance_miles (next5)
+Treatment: true_exog_closure 
+Controls: avg_distance_miles_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: avg_distance_miles_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                         Estimate Std. Error   t value  Pr(>|t|)    
+true_exog_closure        2.159434   7.318445  0.295067   0.76797    
+avg_distance_miles_prev5 0.882343   0.038022 23.205935 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 69.2     Adj. R2: 0.934168
+             Within R2: 0.865798
+
+
+============================================
+[BCY]
+Outcome:chgoff_rate_all (next5)
+Treatment: closure 
+Controls: chgoff_rate_all_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_all_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error   t value Pr(>|t|)    
+closure               -0.003096   0.003098 -0.999416 0.317699    
+chgoff_rate_all_prev5  0.013158   0.007898  1.665970 0.095857 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.118395     Adj. R2: 0.313025
+                 Within R2: 3.393e-4
+
+
+============================================
+[BCY]
+Outcome:chgoff_rate_all (next5)
+Treatment: exog_closure 
+Controls: chgoff_rate_all_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_all_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error  t value  Pr(>|t|)    
+exog_closure          -0.013921   0.004695 -2.96531 0.0030552 ** 
+chgoff_rate_all_prev5  0.013181   0.007902  1.66815 0.0954237 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.118394     Adj. R2: 0.313032
+                 Within R2: 3.503e-4
+
+
+============================================
+[BCY]
+Outcome:chgoff_rate_all (next5)
+Treatment: true_exog_closure 
+Controls: chgoff_rate_all_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_all_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error  t value Pr(>|t|)    
+true_exog_closure     -0.011940   0.004680 -2.55134 0.010796 *  
+chgoff_rate_all_prev5  0.013178   0.007901  1.66781 0.095490 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.118395     Adj. R2: 0.31302 
+                 Within R2: 3.323e-4
+
+
+============================================
+[BCY]
+Outcome:chgoff_rate_resolved (next5)
+Treatment: closure 
+Controls: chgoff_rate_resolved_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_resolved_next5
+Observations: 182,247
+Fixed-effects: loan_cert: 2,123,  county: 2,716,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                            Estimate Std. Error   t value Pr(>|t|)    
+closure                    -0.001000   0.003778 -0.264701 0.791265    
+chgoff_rate_resolved_prev5  0.018427   0.007740  2.380637 0.017371 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.160484     Adj. R2: 0.252809
+                 Within R2: 4.088e-4
+
+
+============================================
+[BCY]
+Outcome:chgoff_rate_resolved (next5)
+Treatment: exog_closure 
+Controls: chgoff_rate_resolved_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_resolved_next5
+Observations: 182,247
+Fixed-effects: loan_cert: 2,123,  county: 2,716,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                            Estimate Std. Error  t value   Pr(>|t|)    
+exog_closure               -0.022328   0.006689 -3.33797 0.00085852 ***
+chgoff_rate_resolved_prev5  0.018420   0.007744  2.37870 0.01746187 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.16048     Adj. R2: 0.252845
+                Within R2: 4.577e-4
+
+
+============================================
+[BCY]
+Outcome:chgoff_rate_resolved (next5)
+Treatment: true_exog_closure 
+Controls: chgoff_rate_resolved_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_resolved_next5
+Observations: 182,247
+Fixed-effects: loan_cert: 2,123,  county: 2,716,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                            Estimate Std. Error  t value Pr(>|t|)    
+true_exog_closure          -0.021142   0.008973 -2.35608 0.018560 *  
+chgoff_rate_resolved_prev5  0.018417   0.007743  2.37849 0.017472 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.160482     Adj. R2: 0.252828
+                 Within R2: 4.35e-4 
+
+
+============================================
+[BCY]
+Outcome:n_loans (next5)
+Treatment: closure 
+Controls: n_loans_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: n_loans_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+              Estimate Std. Error t value   Pr(>|t|)    
+closure       4.800512   2.056786 2.33399 0.01968300 *  
+n_loans_prev5 0.464097   0.120055 3.86569 0.00011388 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 12.4     Adj. R2: 0.367884
+             Within R2: 0.219739
+
+
+============================================
+[BCY]
+Outcome:n_loans (next5)
+Treatment: exog_closure 
+Controls: n_loans_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: n_loans_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+              Estimate Std. Error t value   Pr(>|t|)    
+exog_closure  3.645898   2.132547 1.70964 8.7468e-02 .  
+n_loans_prev5 0.471608   0.119212 3.95604 7.8534e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 12.5     Adj. R2: 0.365077
+             Within R2: 0.216275
+
+
+============================================
+[BCY]
+Outcome:n_loans (next5)
+Treatment: true_exog_closure 
+Controls: n_loans_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: n_loans_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                  Estimate Std. Error t value   Pr(>|t|)    
+true_exog_closure 4.237079   2.957637 1.43259 1.5211e-01    
+n_loans_prev5     0.471481   0.119105 3.95853 7.7725e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 12.5     Adj. R2: 0.365055
+             Within R2: 0.216247
+
+
+============================================
+[BCY]
+Outcome:total_gross_approval (next5)
+Treatment: closure 
+Controls: total_gross_approval_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: total_gross_approval_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                               Estimate  Std. Error  t value  Pr(>|t|)    
+closure                    3.246866e+05 1.17649e+05  2.75979 0.0058302 ** 
+total_gross_approval_prev5 6.709470e-01 3.76510e-02 17.82029 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 2,132,198.1     Adj. R2: 0.599163
+                    Within R2: 0.421245
+
+
+============================================
+[BCY]
+Outcome:total_gross_approval (next5)
+Treatment: exog_closure 
+Controls: total_gross_approval_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: total_gross_approval_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                                Estimate   Std. Error   t value  Pr(>|t|)    
+exog_closure               -95965.078237 3.204744e+05 -0.299447   0.76463    
+total_gross_approval_prev5      0.673747 3.769700e-02 17.872797 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 2,132,964.8     Adj. R2: 0.598875
+                    Within R2: 0.420828
+
+
+============================================
+[BCY]
+Outcome:total_gross_approval (next5)
+Treatment: true_exog_closure 
+Controls: total_gross_approval_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: total_gross_approval_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                                Estimate   Std. Error t value  Pr(>|t|)    
+true_exog_closure          -1.029538e+05 502460.14870 -0.2049   0.83767    
+total_gross_approval_prev5  6.737560e-01      0.03769 17.8763 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 2,132,966.3     Adj. R2: 0.598874
+                    Within R2: 0.420827
+
+
+============================================
+[BCY]
+Outcome:interest_rate_mean (next5)
+Treatment: closure 
+Controls: interest_rate_mean_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: interest_rate_mean_next5
+Observations: 66,575
+Fixed-effects: loan_cert: 1,161,  county: 1,999,  year: 15
+Standard-errors: Clustered (loan_cert) 
+                          Estimate Std. Error  t value   Pr(>|t|)    
+closure                  -0.080332   0.039459 -2.03581 4.1997e-02 *  
+interest_rate_mean_prev5  0.188530   0.047035  4.00828 6.5065e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.05447     Adj. R2: 0.719691
+                Within R2: 0.016512
+
+
+============================================
+[BCY]
+Outcome:interest_rate_mean (next5)
+Treatment: exog_closure 
+Controls: interest_rate_mean_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: interest_rate_mean_next5
+Observations: 66,575
+Fixed-effects: loan_cert: 1,161,  county: 1,999,  year: 15
+Standard-errors: Clustered (loan_cert) 
+                          Estimate Std. Error  t value   Pr(>|t|)    
+exog_closure             -0.191807   0.177645 -1.07972 2.8049e-01    
+interest_rate_mean_prev5  0.188565   0.046992  4.01270 6.3874e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.05458     Adj. R2: 0.719632
+                Within R2: 0.016302
+
+
+============================================
+[BCY]
+Outcome:interest_rate_mean (next5)
+Treatment: true_exog_closure 
+Controls: interest_rate_mean_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: interest_rate_mean_next5
+Observations: 66,575
+Fixed-effects: loan_cert: 1,161,  county: 1,999,  year: 15
+Standard-errors: Clustered (loan_cert) 
+                          Estimate Std. Error   t value   Pr(>|t|)    
+true_exog_closure        -0.156232   0.179487 -0.870434 3.8424e-01    
+interest_rate_mean_prev5  0.188604   0.046995  4.013268 6.3724e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.05459     Adj. R2: 0.719626
+                Within R2: 0.016283
+
+
+============================================
+[BCY]
+Outcome:term_months_mean (next5)
+Treatment: closure 
+Controls: term_months_mean_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: term_months_mean_next5
+Observations: 104,160
+Fixed-effects: loan_cert: 1,692,  county: 2,369,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                        Estimate Std. Error   t value   Pr(>|t|)    
+closure                -0.871248   1.398990 -0.622769 5.3352e-01    
+term_months_mean_prev5  0.109875   0.015582  7.051363 2.5723e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 36.9     Adj. R2: 0.463336
+             Within R2: 0.013046
+
+
+============================================
+[BCY]
+Outcome:term_months_mean (next5)
+Treatment: exog_closure 
+Controls: term_months_mean_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: term_months_mean_next5
+Observations: 104,160
+Fixed-effects: loan_cert: 1,692,  county: 2,369,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                        Estimate Std. Error   t value   Pr(>|t|)    
+exog_closure           -0.776028   3.132339 -0.247747 8.0436e-01    
+term_months_mean_prev5  0.109868   0.015585  7.049790 2.6007e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 36.9     Adj. R2: 0.463324
+             Within R2: 0.013024
+
+
+============================================
+[BCY]
+Outcome:term_months_mean (next5)
+Treatment: true_exog_closure 
+Controls: term_months_mean_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: term_months_mean_next5
+Observations: 104,160
+Fixed-effects: loan_cert: 1,692,  county: 2,369,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                        Estimate Std. Error   t value   Pr(>|t|)    
+true_exog_closure      -0.803179   3.303953 -0.243096 8.0796e-01    
+term_months_mean_prev5  0.109868   0.015584  7.050210 2.5931e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 36.9     Adj. R2: 0.463324
+             Within R2: 0.013024
+
+
+============================================
+[BCY]
+Outcome:fixed_share (next5)
+Treatment: closure 
+Controls: fixed_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: fixed_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                  Estimate Std. Error  t value  Pr(>|t|)    
+closure           0.002857   0.006048 0.472351   0.63672    
+fixed_share_prev5 0.265573   0.027961 9.498033 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.174158     Adj. R2: 0.425754
+                 Within R2: 0.024076
+
+
+============================================
+[BCY]
+Outcome:fixed_share (next5)
+Treatment: exog_closure 
+Controls: fixed_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: fixed_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                  Estimate Std. Error t value  Pr(>|t|)    
+exog_closure      0.023451   0.012927 1.81412  0.069791 .  
+fixed_share_prev5 0.265712   0.028130 9.44595 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.174155     Adj. R2: 0.425774
+                 Within R2: 0.02411 
+
+
+============================================
+[BCY]
+Outcome:fixed_share (next5)
+Treatment: true_exog_closure 
+Controls: fixed_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: fixed_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                  Estimate Std. Error t value  Pr(>|t|)    
+true_exog_closure 0.015007   0.014197 1.05707   0.29059    
+fixed_share_prev5 0.265721   0.028137 9.44377 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.174158     Adj. R2: 0.425756
+                 Within R2: 0.024078
+
+
+============================================
+[BCY]
+Outcome:variable_share (next5)
+Treatment: closure 
+Controls: variable_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: variable_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                     Estimate Std. Error t value   Pr(>|t|)    
+closure              0.035333   0.012149 2.90837 3.6683e-03 ** 
+variable_share_prev5 0.149722   0.027736 5.39806 7.4356e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.245945     Adj. R2: 0.611937
+                 Within R2: 0.013708
+
+
+============================================
+[BCY]
+Outcome:variable_share (next5)
+Treatment: exog_closure 
+Controls: variable_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: variable_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                     Estimate Std. Error t value   Pr(>|t|)    
+exog_closure         0.098978   0.028319 3.49517 4.8283e-04 ***
+variable_share_prev5 0.150724   0.027801 5.42156 6.5322e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.245979     Adj. R2: 0.611832
+                 Within R2: 0.01344 
+
+
+============================================
+[BCY]
+Outcome:variable_share (next5)
+Treatment: true_exog_closure 
+Controls: variable_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: variable_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                     Estimate Std. Error t value   Pr(>|t|)    
+true_exog_closure    0.087951   0.032173 2.73370 6.3112e-03 ** 
+variable_share_prev5 0.150643   0.027833 5.41235 6.8730e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.246003     Adj. R2: 0.611755
+                 Within R2: 0.013244
+
+
+============================================
+[BCY]
+Outcome:collateral_share (next5)
+Treatment: closure 
+Controls: collateral_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: collateral_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error  t value Pr(>|t|) 
+closure                0.003144   0.016349 0.192298  0.84753 
+collateral_share_prev5 0.055530   0.043655 1.272013  0.20350 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.227697     Adj. R2: 0.657929
+                 Within R2: 0.00268 
+
+
+============================================
+[BCY]
+Outcome:collateral_share (next5)
+Treatment: exog_closure 
+Controls: collateral_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: collateral_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error t value Pr(>|t|) 
+exog_closure           0.061886   0.043160 1.43389  0.15174 
+collateral_share_prev5 0.055518   0.043632 1.27240  0.20336 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.227677     Adj. R2: 0.657987
+                 Within R2: 0.002848
+
+
+============================================
+[BCY]
+Outcome:collateral_share (next5)
+Treatment: true_exog_closure 
+Controls: collateral_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: collateral_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                       Estimate Std. Error  t value Pr(>|t|) 
+true_exog_closure      0.010811   0.031248 0.345974  0.72939 
+collateral_share_prev5 0.055529   0.043639 1.272480  0.20333 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.227697     Adj. R2: 0.657928
+                 Within R2: 0.002677
+
+
+============================================
+[BCY]
+Outcome:revolver_share (next5)
+Treatment: closure 
+Controls: revolver_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: revolver_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                     Estimate Std. Error t value   Pr(>|t|)    
+closure              0.022061   0.009948 2.21766 2.6676e-02 *  
+revolver_share_prev5 0.256489   0.050306 5.09859 3.7042e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.185828     Adj. R2: 0.543225
+                 Within R2: 0.038643
+
+
+============================================
+[BCY]
+Outcome:revolver_share (next5)
+Treatment: exog_closure 
+Controls: revolver_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: revolver_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                     Estimate Std. Error t value   Pr(>|t|)    
+exog_closure         0.023749   0.019211 1.23623 2.1650e-01    
+revolver_share_prev5 0.257352   0.050463 5.09981 3.6807e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.185866     Adj. R2: 0.543039
+                 Within R2: 0.03825 
+
+
+============================================
+[BCY]
+Outcome:revolver_share (next5)
+Treatment: true_exog_closure 
+Controls: revolver_share_prev5 
+FE: loan_cert + county + year 
+Cluster: loan_cert 
+============================================
+OLS estimation, Dep. Var.: revolver_share_next5
+Observations: 215,501
+Fixed-effects: loan_cert: 2,277,  county: 2,801,  year: 29
+Standard-errors: Clustered (loan_cert) 
+                     Estimate Std. Error t value   Pr(>|t|)    
+true_exog_closure    0.033942   0.025439 1.33426 1.8225e-01    
+revolver_share_prev5 0.257374   0.050467 5.09989 3.6791e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.185865     Adj. R2: 0.543043
+                 Within R2: 0.038259
+
+Running CY DID...
+
+
+============================================
+[CY]
+Outcome:avg_distance_miles (next5)
+Treatment: closure 
+Controls: avg_distance_miles_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: avg_distance_miles_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                         Estimate Std. Error  t value Pr(>|t|) 
+closure                  1.699549   1.683120 1.009761  0.31269 
+avg_distance_miles_prev5 0.022928   0.041431 0.553417  0.58002 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 109.9     Adj. R2: 0.727936
+              Within R2: 2.277e-4
+
+
+============================================
+[CY]
+Outcome:avg_distance_miles (next5)
+Treatment: exog_closure 
+Controls: avg_distance_miles_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: avg_distance_miles_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                          Estimate Std. Error  t value  Pr(>|t|)    
+exog_closure             11.015634   3.399046 3.240802 0.0012048 ** 
+avg_distance_miles_prev5  0.022766   0.041434 0.549455 0.5827334    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 109.9     Adj. R2: 0.727955
+              Within R2: 2.961e-4
+
+
+============================================
+[CY]
+Outcome:avg_distance_miles (next5)
+Treatment: true_exog_closure 
+Controls: avg_distance_miles_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: avg_distance_miles_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                          Estimate Std. Error  t value   Pr(>|t|)    
+true_exog_closure        23.399473   5.543150 4.221331 2.4996e-05 ***
+avg_distance_miles_prev5  0.022646   0.041439 0.546481 5.8478e-01    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 109.9     Adj. R2: 0.727989
+              Within R2: 4.228e-4
+
+
+============================================
+[CY]
+Outcome:chgoff_rate_all (next5)
+Treatment: closure 
+Controls: chgoff_rate_all_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_all_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                       Estimate Std. Error   t value  Pr(>|t|)    
+closure               -0.001384   0.000808  -1.71230  0.086944 .  
+chgoff_rate_all_prev5 -0.151025   0.007598 -19.87581 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.072036     Adj. R2: 0.54769
+                 Within R2: 0.03675
+
+
+============================================
+[CY]
+Outcome:chgoff_rate_all (next5)
+Treatment: exog_closure 
+Controls: chgoff_rate_all_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_all_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                       Estimate Std. Error   t value  Pr(>|t|)    
+exog_closure          -0.003356   0.002132  -1.57408   0.11557    
+chgoff_rate_all_prev5 -0.151010   0.007598 -19.87371 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.072036     Adj. R2: 0.547687
+                 Within R2: 0.036743
+
+
+============================================
+[CY]
+Outcome:chgoff_rate_all (next5)
+Treatment: true_exog_closure 
+Controls: chgoff_rate_all_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_all_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                       Estimate Std. Error   t value  Pr(>|t|)    
+true_exog_closure     -0.006306   0.002323  -2.71462 0.0066725 ** 
+chgoff_rate_all_prev5 -0.151012   0.007598 -19.87426 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.072036     Adj. R2: 0.547695
+                 Within R2: 0.03676 
+
+
+============================================
+[CY]
+Outcome:chgoff_rate_resolved (next5)
+Treatment: closure 
+Controls: chgoff_rate_resolved_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_resolved_next5
+Observations: 59,001
+Fixed-effects: county: 3,026,  year: 29
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error    t value  Pr(>|t|)    
+closure                     0.000234   0.001454   0.161038   0.87207    
+chgoff_rate_resolved_prev5 -0.172220   0.009076 -18.975834 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.101952     Adj. R2: 0.436984
+                 Within R2: 0.030173
+
+
+============================================
+[CY]
+Outcome:chgoff_rate_resolved (next5)
+Treatment: exog_closure 
+Controls: chgoff_rate_resolved_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_resolved_next5
+Observations: 59,001
+Fixed-effects: county: 3,026,  year: 29
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error   t value  Pr(>|t|)    
+exog_closure               -0.004342   0.002709  -1.60278   0.10909    
+chgoff_rate_resolved_prev5 -0.172245   0.009077 -18.97579 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.101951     Adj. R2: 0.436993
+                 Within R2: 0.030188
+
+
+============================================
+[CY]
+Outcome:chgoff_rate_resolved (next5)
+Treatment: true_exog_closure 
+Controls: chgoff_rate_resolved_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: chgoff_rate_resolved_next5
+Observations: 59,001
+Fixed-effects: county: 3,026,  year: 29
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error   t value  Pr(>|t|)    
+true_exog_closure          -0.007807   0.003171  -2.46188  0.013876 *  
+chgoff_rate_resolved_prev5 -0.172247   0.009077 -18.97666 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.10195     Adj. R2: 0.437   
+                Within R2: 0.030201
+
+
+============================================
+[CY]
+Outcome:n_loans (next5)
+Treatment: closure 
+Controls: n_loans_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: n_loans_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+               Estimate Std. Error   t value  Pr(>|t|)    
+closure        4.005632   0.546393   7.33104 2.911e-13 ***
+n_loans_prev5 -0.163486   0.016216 -10.08189 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 25.4     Adj. R2: 0.885686
+             Within R2: 0.032972
+
+
+============================================
+[CY]
+Outcome:n_loans (next5)
+Treatment: exog_closure 
+Controls: n_loans_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: n_loans_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+               Estimate Std. Error  t value  Pr(>|t|)    
+exog_closure  10.037461   4.449051  2.25609  0.024136 *  
+n_loans_prev5 -0.161346   0.016467 -9.79817 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 25.4     Adj. R2: 0.885638
+             Within R2: 0.032564
+
+
+============================================
+[CY]
+Outcome:n_loans (next5)
+Treatment: true_exog_closure 
+Controls: n_loans_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: n_loans_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                   Estimate Std. Error   t value  Pr(>|t|)    
+true_exog_closure  2.273626   7.949931  0.285993    0.7749    
+n_loans_prev5     -0.162198   0.016450 -9.860046 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 25.5     Adj. R2: 0.885492
+             Within R2: 0.031324
+
+
+============================================
+[CY]
+Outcome:total_gross_approval (next5)
+Treatment: closure 
+Controls: total_gross_approval_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: total_gross_approval_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                               Estimate   Std. Error t value   Pr(>|t|)    
+closure                    6.408666e+05 2.706702e+05 2.36770 1.7961e-02 *  
+total_gross_approval_prev5 7.267760e-01 1.152660e-01 6.30519 3.2940e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 5,748,609.0     Adj. R2: 0.950697
+                    Within R2: 0.535943
+
+
+============================================
+[CY]
+Outcome:total_gross_approval (next5)
+Treatment: exog_closure 
+Controls: total_gross_approval_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: total_gross_approval_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                                Estimate   Std. Error  t value   Pr(>|t|)    
+exog_closure               -2.488934e+06 833784.43046 -2.98511 2.8573e-03 ** 
+total_gross_approval_prev5  7.285360e-01      0.11544  6.31092 3.1758e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 5,746,541.7     Adj. R2: 0.950733
+                    Within R2: 0.536277
+
+
+============================================
+[CY]
+Outcome:total_gross_approval (next5)
+Treatment: true_exog_closure 
+Controls: total_gross_approval_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: total_gross_approval_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                                Estimate   Std. Error  t value   Pr(>|t|)    
+true_exog_closure          -4.907629e+06 2.279878e+06 -2.15258 3.1430e-02 *  
+total_gross_approval_prev5  7.292900e-01 1.153720e-01  6.32123 2.9735e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 5,741,324.9     Adj. R2: 0.950822
+                    Within R2: 0.537119
+
+
+============================================
+[CY]
+Outcome:interest_rate_mean_w (next5)
+Treatment: closure 
+Controls: interest_rate_mean_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: interest_rate_mean_w_next5
+Observations: 27,480
+Fixed-effects: county: 2,622,  year: 15
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error  t value   Pr(>|t|)    
+closure                     0.027850   0.011383  2.44666 1.4484e-02 *  
+interest_rate_mean_w_prev5 -0.078763   0.014117 -5.57913 2.6648e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.588485     Adj. R2: 0.867656
+                 Within R2: 0.005082
+
+
+============================================
+[CY]
+Outcome:interest_rate_mean_w (next5)
+Treatment: exog_closure 
+Controls: interest_rate_mean_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: interest_rate_mean_w_next5
+Observations: 27,480
+Fixed-effects: county: 2,622,  year: 15
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error  t value   Pr(>|t|)    
+exog_closure               -0.039495   0.024893 -1.58657 1.1273e-01    
+interest_rate_mean_w_prev5 -0.078849   0.014124 -5.58245 2.6150e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.58853     Adj. R2: 0.867636
+                Within R2: 0.004929
+
+
+============================================
+[CY]
+Outcome:interest_rate_mean_w (next5)
+Treatment: true_exog_closure 
+Controls: interest_rate_mean_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: interest_rate_mean_w_next5
+Observations: 27,480
+Fixed-effects: county: 2,622,  year: 15
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error   t value   Pr(>|t|)    
+true_exog_closure           0.024885   0.029735  0.836904 4.0272e-01    
+interest_rate_mean_w_prev5 -0.078681   0.014127 -5.569414 2.8159e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.588537     Adj. R2: 0.867632
+                 Within R2: 0.004904
+
+
+============================================
+[CY]
+Outcome:term_months_mean_w (next5)
+Treatment: closure 
+Controls: term_months_mean_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: term_months_mean_w_next5
+Observations: 55,553
+Fixed-effects: county: 2,925,  year: 29
+Standard-errors: Clustered (county) 
+                          Estimate Std. Error  t value   Pr(>|t|)    
+closure                  -1.688614   0.385052 -4.38542 1.1985e-05 ***
+term_months_mean_w_prev5 -0.069820   0.009209 -7.58186 4.5457e-14 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 29.1     Adj. R2: 0.509367
+             Within R2: 0.006185
+
+
+============================================
+[CY]
+Outcome:term_months_mean_w (next5)
+Treatment: exog_closure 
+Controls: term_months_mean_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: term_months_mean_w_next5
+Observations: 55,553
+Fixed-effects: county: 2,925,  year: 29
+Standard-errors: Clustered (county) 
+                          Estimate Std. Error   t value   Pr(>|t|)    
+exog_closure              0.312809   0.810105  0.386134 6.9943e-01    
+term_months_mean_w_prev5 -0.069862   0.009208 -7.587079 4.3698e-14 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 29.1     Adj. R2: 0.509242
+             Within R2: 0.005932
+
+
+============================================
+[CY]
+Outcome:term_months_mean_w (next5)
+Treatment: true_exog_closure 
+Controls: term_months_mean_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: term_months_mean_w_next5
+Observations: 55,553
+Fixed-effects: county: 2,925,  year: 29
+Standard-errors: Clustered (county) 
+                          Estimate Std. Error   t value   Pr(>|t|)    
+true_exog_closure        -0.022599   1.010035 -0.022374 9.8215e-01    
+term_months_mean_w_prev5 -0.069861   0.009208 -7.586976 4.3732e-14 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 29.1     Adj. R2: 0.509242
+             Within R2: 0.005931
+
+
+============================================
+[CY]
+Outcome:fixed_share_w (next5)
+Treatment: closure 
+Controls: fixed_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: fixed_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                     Estimate Std. Error   t value   Pr(>|t|)    
+closure             -0.005895   0.001470 -4.011016 6.1909e-05 ***
+fixed_share_w_prev5  0.009065   0.019193  0.472300 6.3675e-01    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.113646     Adj. R2: 0.513132
+                 Within R2: 2.238e-4
+
+
+============================================
+[CY]
+Outcome:fixed_share_w (next5)
+Treatment: exog_closure 
+Controls: fixed_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: fixed_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                    Estimate Std. Error  t value Pr(>|t|)    
+exog_closure        0.005179   0.003033 1.707468 0.087837 .  
+fixed_share_w_prev5 0.009328   0.019204 0.485757 0.627174    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.113656     Adj. R2: 0.513049
+                 Within R2: 5.232e-5
+
+
+============================================
+[CY]
+Outcome:fixed_share_w (next5)
+Treatment: true_exog_closure 
+Controls: fixed_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: fixed_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                    Estimate Std. Error  t value Pr(>|t|) 
+true_exog_closure   0.001997   0.003703 0.539225  0.58977 
+fixed_share_w_prev5 0.009313   0.019204 0.484971  0.62773 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.113657     Adj. R2: 0.513041
+                 Within R2: 3.615e-5
+
+
+============================================
+[CY]
+Outcome:variable_share_w (next5)
+Treatment: closure 
+Controls: variable_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: variable_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                        Estimate Std. Error  t value   Pr(>|t|)    
+closure                 0.011083   0.001973  5.61776 2.1086e-08 ***
+variable_share_w_prev5 -0.034130   0.012819 -2.66247 7.7977e-03 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.144705     Adj. R2: 0.798163
+                 Within R2: 0.001039
+
+
+============================================
+[CY]
+Outcome:variable_share_w (next5)
+Treatment: exog_closure 
+Controls: variable_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: variable_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                        Estimate Std. Error  t value  Pr(>|t|)    
+exog_closure           -0.005266   0.004068 -1.29430 0.1956591    
+variable_share_w_prev5 -0.033706   0.012831 -2.62689 0.0086599 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.144734     Adj. R2: 0.798082
+                 Within R2: 6.387e-4
+
+
+============================================
+[CY]
+Outcome:variable_share_w (next5)
+Treatment: true_exog_closure 
+Controls: variable_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: variable_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                        Estimate Std. Error  t value  Pr(>|t|)    
+true_exog_closure       0.008577   0.005217  1.64387 0.1003053    
+variable_share_w_prev5 -0.033605   0.012831 -2.61899 0.0088628 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.144734     Adj. R2: 0.798083
+                 Within R2: 6.438e-4
+
+
+============================================
+[CY]
+Outcome:collateral_share_w (next5)
+Treatment: closure 
+Controls: collateral_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: collateral_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                          Estimate Std. Error   t value Pr(>|t|) 
+closure                  -0.002439   0.001884 -1.294456  0.19561 
+collateral_share_w_prev5 -0.000036   0.008361 -0.004333  0.99654 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.134081     Adj. R2: 0.853423
+                 Within R2: 2.326e-5
+
+
+============================================
+[CY]
+Outcome:collateral_share_w (next5)
+Treatment: exog_closure 
+Controls: collateral_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: collateral_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                         Estimate Std. Error  t value Pr(>|t|)    
+exog_closure             0.009754   0.004057 2.404326 0.016262 *  
+collateral_share_w_prev5 0.000043   0.008359 0.005176 0.995870    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.13408     Adj. R2: 0.853426
+                Within R2: 4.488e-5
+
+
+============================================
+[CY]
+Outcome:collateral_share_w (next5)
+Treatment: true_exog_closure 
+Controls: collateral_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: collateral_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                            Estimate Std. Error   t value Pr(>|t|) 
+true_exog_closure        -0.00594014   0.005134 -1.156969  0.24738 
+collateral_share_w_prev5 -0.00000668   0.008361 -0.000799  0.99936 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.134082     Adj. R2: 0.853421
+                 Within R2: 9.172e-6
+
+
+============================================
+[CY]
+Outcome:revolver_share_w (next5)
+Treatment: closure 
+Controls: revolver_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: revolver_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                        Estimate Std. Error   t value  Pr(>|t|)    
+closure                 0.005332   0.001773  3.006887 0.0026609 ** 
+revolver_share_w_prev5 -0.009455   0.014087 -0.671148 0.5021770    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.11459     Adj. R2: 0.517276
+                Within R2: 1.994e-4
+
+
+============================================
+[CY]
+Outcome:revolver_share_w (next5)
+Treatment: exog_closure 
+Controls: revolver_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: revolver_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                        Estimate Std. Error   t value   Pr(>|t|)    
+exog_closure           -0.016330   0.004299 -3.798285 0.00014854 ***
+revolver_share_w_prev5 -0.009524   0.014088 -0.676084 0.49903862    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.114589     Adj. R2: 0.517286
+                 Within R2: 2.194e-4
+
+
+============================================
+[CY]
+Outcome:revolver_share_w (next5)
+Treatment: true_exog_closure 
+Controls: revolver_share_w_prev5 
+FE: county + year 
+Cluster: county 
+============================================
+OLS estimation, Dep. Var.: revolver_share_w_next5
+Observations: 63,859
+Fixed-effects: county: 3,051,  year: 29
+Standard-errors: Clustered (county) 
+                        Estimate Std. Error   t value Pr(>|t|) 
+true_exog_closure      -0.002636   0.005536 -0.476144  0.63401 
+revolver_share_w_prev5 -0.009170   0.014095 -0.650562  0.51538 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.114598     Adj. R2: 0.517204
+                 Within R2: 4.976e-5
+
+Saving results to: output/descriptives/did_terms/did_terms_results_k5.csv 
+
+Done.
