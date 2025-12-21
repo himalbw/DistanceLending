@@ -1,0 +1,120 @@
+
+
+==============================
+TWFE DiD
+Outcome: avg_distance_miles
+Treat: big_any_closure
+Time: 2025-12-21 12:20:12.20798
+OLS estimation, Dep. Var.: avg_distance_miles Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                  Estimate Std. Error  t value  Pr(>|t|)     big_any_closure -7.70942    2.61944 -2.94316 0.0032505 **  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 61.9     Adj. R2: 0.962742              Within R2: 1.178e-4
+
+
+==============================
+TWFE DiD
+Outcome: med_distance_miles
+Treat: big_any_closure
+Time: 2025-12-21 12:20:12.325337
+OLS estimation, Dep. Var.: med_distance_miles Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                  Estimate Std. Error  t value  Pr(>|t|)     big_any_closure -7.76896    2.62049 -2.96469 0.0030314 **  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 62.2     Adj. R2: 0.962422              Within R2: 1.185e-4
+
+
+==============================
+TWFE DiD
+Outcome: default_rate
+Treat: big_any_closure
+Time: 2025-12-21 12:20:12.411267
+OLS estimation, Dep. Var.: default_rate Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                   Estimate Std. Error  t value Pr(>|t|)     big_any_closure -0.009559   0.003909 -2.44515 0.014483 *   --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 0.206954     Adj. R2: 0.194836                  Within R2: 1.622e-5
+
+
+==============================
+TWFE DiD
+Outcome: log_lending
+Treat: big_any_closure
+Time: 2025-12-21 12:20:12.494128
+OLS estimation, Dep. Var.: log_lending Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                  Estimate Std. Error t value  Pr(>|t|)     big_any_closure 0.662853   0.021438  30.919 < 2.2e-16 *** --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 1.0896     Adj. R2: 0.451025                Within R2: 0.002806
+
+
+==============================
+TWFE DiD
+Outcome: loan_growth
+Treat: big_any_closure
+Time: 2025-12-21 12:20:12.558595
+OLS estimation, Dep. Var.: loan_growth Observations: 246,910 Fixed-effects: unit_fe: 31,025,  year: 30 Standard-errors: Clustered (unit_fe)                  Estimate Std. Error t value   Pr(>|t|)     big_any_closure 0.186232   0.029243  6.3685 1.9355e-10 *** --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 1.44817     Adj. R2: -0.075635                 Within R2:  1.276e-4
+
+
+==============================
+TWFE DiD
+Outcome: avg_distance_miles
+Treat: big_any_exog_closure
+Time: 2025-12-21 12:20:12.645909
+OLS estimation, Dep. Var.: avg_distance_miles Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                       Estimate Std. Error t value   Pr(>|t|)     big_any_exog_closure  9.12025    2.49166 3.66031 0.00025221 *** --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 61.9     Adj. R2: 0.962738              Within R2: 1.493e-5
+
+
+==============================
+TWFE DiD
+Outcome: med_distance_miles
+Treat: big_any_exog_closure
+Time: 2025-12-21 12:20:12.73444
+OLS estimation, Dep. Var.: med_distance_miles Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                       Estimate Std. Error t value   Pr(>|t|)     big_any_exog_closure  9.14055    2.50654 3.64668 0.00026596 *** --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 62.2     Adj. R2: 0.962418              Within R2: 1.486e-5
+
+
+==============================
+TWFE DiD
+Outcome: default_rate
+Treat: big_any_exog_closure
+Time: 2025-12-21 12:20:12.813681
+OLS estimation, Dep. Var.: default_rate Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                       Estimate Std. Error  t value Pr(>|t|)  big_any_exog_closure 0.011534    0.01346 0.856966  0.39147  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 0.206956     Adj. R2: 0.194824                  Within R2: 2.139e-6
+
+
+==============================
+TWFE DiD
+Outcome: log_lending
+Treat: big_any_exog_closure
+Time: 2025-12-21 12:20:12.88978
+OLS estimation, Dep. Var.: log_lending Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                       Estimate Std. Error t value  Pr(>|t|)     big_any_exog_closure 0.743218   0.064879 11.4554 < 2.2e-16 *** --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 1.09096     Adj. R2: 0.449656                 Within R2: 3.195e-4
+
+
+==============================
+TWFE DiD
+Outcome: loan_growth
+Treat: big_any_exog_closure
+Time: 2025-12-21 12:20:12.956284
+OLS estimation, Dep. Var.: loan_growth Observations: 246,910 Fixed-effects: unit_fe: 31,025,  year: 30 Standard-errors: Clustered (unit_fe)                       Estimate Std. Error t value Pr(>|t|)     big_any_exog_closure  0.19901   0.101669 1.95743 0.050306 .   --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 1.44825     Adj. R2: -0.075757                 Within R2:  1.398e-5
+
+
+==============================
+TWFE DiD
+Outcome: avg_distance_miles
+Treat: big_any_true_exog
+Time: 2025-12-21 12:20:13.040871
+OLS estimation, Dep. Var.: avg_distance_miles Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                    Estimate Std. Error t value Pr(>|t|)     big_any_true_exog -4.38867    1.55621 -2.8201 0.004803 **  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 61.9     Adj. R2: 0.962738              Within R2: 1.604e-6
+
+
+==============================
+TWFE DiD
+Outcome: med_distance_miles
+Treat: big_any_true_exog
+Time: 2025-12-21 12:20:13.125606
+OLS estimation, Dep. Var.: med_distance_miles Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                    Estimate Std. Error t value  Pr(>|t|)     big_any_true_exog -4.42851    1.56451 -2.8306 0.0046482 **  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 62.2     Adj. R2: 0.962418              Within R2: 1.619e-6
+
+
+==============================
+TWFE DiD
+Outcome: default_rate
+Treat: big_any_true_exog
+Time: 2025-12-21 12:20:13.197985
+OLS estimation, Dep. Var.: default_rate Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                    Estimate Std. Error  t value Pr(>|t|)  big_any_true_exog 0.003866    0.01388 0.278497  0.78063  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 0.206956     Adj. R2: 0.194823                  Within R2: 1.115e-7
+
+
+==============================
+TWFE DiD
+Outcome: log_lending
+Treat: big_any_true_exog
+Time: 2025-12-21 12:20:13.282346
+OLS estimation, Dep. Var.: log_lending Observations: 304,833 Fixed-effects: unit_fe: 44,474,  year: 31 Standard-errors: Clustered (unit_fe)                    Estimate Std. Error t value   Pr(>|t|)     big_any_true_exog 0.716827   0.089233 8.03322 9.7264e-16 *** --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 1.09106     Adj. R2: 0.449556                 Within R2: 1.38e-4 
+
+
+==============================
+TWFE DiD
+Outcome: loan_growth
+Treat: big_any_true_exog
+Time: 2025-12-21 12:20:13.374506
+OLS estimation, Dep. Var.: loan_growth Observations: 246,910 Fixed-effects: unit_fe: 31,025,  year: 30 Standard-errors: Clustered (unit_fe)                    Estimate Std. Error  t value Pr(>|t|)  big_any_true_exog 0.014144   0.132083 0.107081  0.91473  --- Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 RMSE: 1.44826     Adj. R2: -0.075772                 Within R2:  3.46e-8 
